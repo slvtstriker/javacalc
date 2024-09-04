@@ -1,0 +1,18 @@
+import javax.swing.JOptionPane;
+
+public class Circulo {
+    public static void main(String[] args) {
+        String raioStr = JOptionPane.showInputDialog("Informe o raio do círculo:");
+        double raio = Double.parseDouble(raioStr);
+
+        double diametro = 2 * raio;
+        double circunferencia = 2 * Math.PI * raio;
+        double area = Math.PI * Math.pow(raio, 2);
+
+        String mensagem = "Diâmetro: " + diametro + "\n";
+        mensagem += "Circunferência: " + circunferencia + "\n";
+        mensagem += "Área: " + area;
+
+        JOptionPane.showMessageDialog(null, mensagem);
+    }
+}
