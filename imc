@@ -1,0 +1,30 @@
+
+
+import javax.swing.JOptionPane;
+
+public class IMC {
+    public static void main(String[] args) {
+        String pesoStr = JOptionPane.showInputDialog("Informe o seu peso (em kg):");
+        double peso = Double.parseDouble(pesoStr);
+
+        String alturaStr = JOptionPane.showInputDialog("Informe a sua altura (em metros):");
+        double altura = Double.parseDouble(alturaStr);
+
+        double imc = peso / Math.pow(altura, 2);
+
+        String mensagem;
+        if (imc < 18.5) {
+            mensagem = "Você está abaixo do peso.";
+        } else if (imc < 25) {
+            mensagem = "Você está no peso normal.";
+        } else if (imc < 30) {
+            mensagem = "Você está acima do peso.";
+        } else {
+            mensagem = "Você está obeso.";
+        }
+
+        mensagem = "Seu IMC é: " + imc + "\n" + mensagem;
+
+        JOptionPane.showMessageDialog(null, mensagem);
+    }
+}
